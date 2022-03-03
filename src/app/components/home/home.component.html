@@ -1,0 +1,26 @@
+<div class="container">
+<header class="header">
+    <h1>Pokemon List</h1>
+    <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="form1"
+           [(ngModel)]="searchTerm" 
+           class="form-control"
+           placeholder="Search Pokemon"
+           (ngModelChange)="onSearch($event)"/>
+        </div>
+      </div>
+</header>
+<div class="card-group">
+  <div *ngFor="let pokemon of filteredPokemons; let i = index" clas="col-md-4">
+    <div class="pokemon" [routerLink]="['/info', pokemon.id]">
+      <div class="card" style="width: 18rem">
+        <img src="{{pokemon.image}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemon.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

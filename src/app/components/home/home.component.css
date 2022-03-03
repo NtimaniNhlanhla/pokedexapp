@@ -1,0 +1,23 @@
+.card {
+    padding: 10px;
+    margin: 2px;
+}
+
+.header {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pokemon:hover {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 100%;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 800px;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+  }
